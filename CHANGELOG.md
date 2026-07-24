@@ -2,6 +2,14 @@
 
 ## 2026-07-24
 
+### Responsive
+
+- Se reforzo el responsive para pantallas pequenas, especialmente celulares.
+- Se ajustaron tamanos de titulos, botones, tarjetas, buscadores, modales y capturas para evitar desbordes.
+- Se agrego scroll interno a los modales para que no se salgan de la pantalla en dispositivos bajos.
+- Se mantuvo el fondo fijo y se adapto el contenido encima.
+- Se separo la frase amarilla del titulo en celulares para evitar que se monte sobre `DEVJOSL`.
+
 ### LinkedIn y CV
 
 - Se agrego un campo para LinkedIn dentro del modal de contacto.

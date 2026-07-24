@@ -126,6 +126,7 @@
 .portfolio-layout {
   width: min(820px, 100%);
   min-height: 0;
+  min-width: 0;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr;
@@ -153,6 +154,7 @@
 
 .main-menu-wrap {
   width: min(420px, 100%);
+  min-width: 0;
   margin: 0 auto;
   display: grid;
   gap: 14px;
@@ -359,6 +361,8 @@
 
 .contact-modal {
   width: min(520px, 100%);
+  max-height: calc(100svh - 36px);
+  overflow-y: auto;
   padding: 18px;
   border: 3px solid #111;
   border-radius: 0;
@@ -561,6 +565,7 @@
 
 .server-card,
 .world-card {
+  min-width: 0;
   display: grid;
   grid-template-columns: 64px minmax(0, 1fr);
   gap: 14px;
@@ -729,9 +734,11 @@
 
 .server-card h3,
 .world-card h3 {
+  min-width: 0;
   font-family: var(--pixel);
   font-size: 0.82rem;
   letter-spacing: 0;
+  overflow-wrap: anywhere;
   text-shadow: 2px 2px 0 #111;
 }
 
@@ -739,6 +746,7 @@
 .world-card p,
 .about-copy {
   color: var(--text-muted);
+  overflow-wrap: anywhere;
 }
 
 .server-status {
@@ -829,6 +837,7 @@
 
 .view-all {
   justify-self: center;
+  width: min(100%, 360px);
   min-width: 260px;
   text-align: center;
 }
@@ -860,6 +869,12 @@
   justify-content: space-between;
   gap: 16px;
   font-family: var(--pixel);
+  min-width: 0;
+}
+
+.skill-heading h3 {
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .skill-track {
@@ -956,21 +971,53 @@
 @media (max-width: 760px) {
   .portfolio-screen {
     padding: 28px 14px 18px;
+    gap: 14px;
+  }
+
+  .portfolio-screen--subscreen {
+    padding-top: 18px;
+  }
+
+  .portfolio-layout {
+    padding-top: 12px;
+  }
+
+  .portfolio-screen--subscreen .portfolio-layout {
+    align-content: stretch;
+  }
+
+  .portfolio-header {
+    padding-top: 4px;
+    gap: 8px;
+  }
+
+  .portfolio-header h1 {
+    font-size: 2.2rem;
+    line-height: 1;
+    margin-bottom: 0;
+  }
+
+  .portfolio-kicker,
+  .content-eyebrow,
+  .project-type {
+    font-size: 0.56rem;
   }
 
   .splash-text {
     position: static;
+    display: inline-block;
     justify-self: center;
-    max-width: 100%;
-    margin-top: -2px;
+    max-width: min(82vw, 320px);
+    margin: 3px 0 2px;
     text-align: center;
-    transform: rotate(-9deg);
+    transform: translateX(18px) rotate(-9deg);
     white-space: normal;
     animation: none;
   }
 
   .content-panel {
     min-height: auto;
+    max-height: 100%;
     padding: 14px;
   }
 
@@ -983,6 +1030,8 @@
   .server-card,
   .world-card {
     grid-template-columns: 52px minmax(0, 1fr);
+    gap: 12px;
+    padding: 12px;
   }
 
   .server-icon,
@@ -992,6 +1041,10 @@
 
   .options-grid {
     grid-template-columns: 1fr;
+  }
+
+  .view-all {
+    min-width: 0;
   }
 
   .quick-link-spacer {
@@ -1016,5 +1069,184 @@
     align-items: center;
     flex-direction: column;
     gap: 4px;
+    font-size: 0.62rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .portfolio-screen {
+    padding: 18px 10px 14px;
+  }
+
+  .portfolio-header h1 {
+    font-size: 1.82rem;
+    text-shadow:
+      2px 2px 0 #5a5a5a,
+      4px 4px 0 #242424,
+      6px 6px 0 rgba(0, 0, 0, 0.45);
+  }
+
+  .welcome-text {
+    font-size: 0.5rem;
+    line-height: 1.45;
+  }
+
+  .splash-text {
+    font-size: 0.5rem;
+    line-height: 1.15;
+    margin-top: 5px;
+    transform: translateX(14px) rotate(-8deg);
+  }
+
+  .main-menu-wrap {
+    gap: 10px;
+  }
+
+  .menu-button {
+    min-height: 44px;
+    padding: 0 8px;
+    font-size: 0.58rem;
+    line-height: 1.3;
+  }
+
+  .quick-link-spacer {
+    min-height: 18px;
+  }
+
+  .primary-actions,
+  .icon-row--beside {
+    gap: 7px;
+  }
+
+  .icon-button {
+    min-height: 40px;
+  }
+
+  .content-panel,
+  .contact-modal {
+    padding: 12px;
+  }
+
+  .section-content {
+    gap: 14px;
+  }
+
+  .section-content h2,
+  .contact-modal h2 {
+    font-size: 1.08rem;
+    line-height: 1.25;
+  }
+
+  .screen-heading {
+    gap: 10px;
+  }
+
+  .back-button {
+    min-width: 0;
+    width: 100%;
+    font-size: 0.58rem;
+  }
+
+  .server-card,
+  .world-card {
+    grid-template-columns: 44px minmax(0, 1fr);
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .server-icon,
+  .world-icon {
+    width: 44px;
+    font-size: 0.78rem;
+  }
+
+  .server-card h3,
+  .world-card h3 {
+    font-size: 0.68rem;
+    line-height: 1.35;
+  }
+
+  .server-card p,
+  .world-card p,
+  .about-copy,
+  .timeline-content p {
+    font-size: 0.92rem;
+    line-height: 1.45;
+  }
+
+  .project-preview__body li,
+  .project-learning li,
+  .tag-list li,
+  .social-links a {
+    font-size: 0.52rem;
+    line-height: 1.3;
+  }
+
+  .project-screenshots__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-heading {
+    align-items: start;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .search-bar input {
+    font-size: 0.54rem;
+    line-height: 1.35;
+  }
+
+  .option-card {
+    min-height: 68px;
+  }
+
+  .option-card dd,
+  .option-card strong {
+    font-size: 0.7rem;
+    line-height: 1.35;
+  }
+
+  .option-card dt,
+  .option-card span {
+    font-size: 0.58rem;
+    line-height: 1.35;
+  }
+
+  .contact-card strong {
+    font-size: 0.62rem;
+    line-height: 1.45;
+  }
+
+  .timeline-list {
+    padding-left: 24px;
+  }
+}
+
+@media (max-height: 680px) and (max-width: 760px) {
+  .portfolio-screen {
+    padding-top: 12px;
+    padding-bottom: 10px;
+    gap: 10px;
+  }
+
+  .portfolio-layout {
+    padding-top: 4px;
+  }
+
+  .portfolio-header h1 {
+    font-size: 1.72rem;
+  }
+
+  .splash-text {
+    margin-top: 3px;
+  }
+
+  .portfolio-kicker {
+    font-size: 0.5rem;
+  }
+
+  .welcome-text {
+    display: none;
   }
 }
