@@ -207,6 +207,22 @@
     inset -2px -2px 0 rgba(255, 255, 255, 0.2);
 }
 
+.menu-button:disabled {
+  cursor: default;
+  opacity: 0.72;
+}
+
+.menu-button:disabled:hover {
+  color: #f2f2f2;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.12) 1px, transparent 1px) 0 0 / 100% 4px,
+    linear-gradient(180deg, #8a8a8a 0%, #767676 46%, #5c5c5c 54%, #464646 100%);
+  box-shadow:
+    inset 2px 2px 0 rgba(255, 255, 255, 0.48),
+    inset -2px -2px 0 rgba(0, 0, 0, 0.55),
+    3px 3px 0 rgba(0, 0, 0, 0.35);
+}
+
 .menu-button--ghost {
   min-height: 40px;
   font-size: 0.6rem;
@@ -277,6 +293,12 @@
 
 .bottom-actions .menu-button {
   text-align: center;
+}
+
+.primary-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 9px;
 }
 
 .icon-row--beside {
@@ -911,6 +933,14 @@
 .option-card strong {
   color: #ffffff;
   font-size: 0.84rem;
+}
+
+.option-card .option-card__hint {
+  color: var(--accent);
+  font-size: 0.58rem;
+  line-height: 1.35;
+  text-shadow: 2px 2px 0 #3f3f00;
+  text-transform: uppercase;
 }
 
 .screen-footer {

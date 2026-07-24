@@ -37,6 +37,8 @@ export const translations = {
     menu: {
       ariaLabel: 'Menú principal del portfolio',
       contact: 'Contacto',
+      cv: 'CV',
+      cvUnavailable: 'Agrega tu CV en portfolio.js',
       languageButtonLabel: 'Cambiar idioma',
       quickLinksLabel: 'Enlaces rápidos',
       options: [
@@ -166,6 +168,7 @@ export const translations = {
     about: {
       summary:
         'Soy desarrollador Full Stack con experiencia en la creación de aplicaciones web y móviles. Trabajo principalmente con JavaScript, Java, HTML y CSS, además de tecnologías como React, React Native, Node.js, Express, MongoDB, PostgreSQL, Git y Docker. También cuento con conocimientos básicos de C# y continúo aprendiendo nuevas herramientas para mejorar mis habilidades. Me considero una persona responsable, creativa y enfocada en resolver problemas mediante soluciones funcionales, organizadas y fáciles de usar.',
+      clickHint: 'Clíkeame',
       personalDataLabel: 'Datos personales',
       socialProfilesLabel: 'Perfiles sociales',
       details: [
@@ -244,6 +247,8 @@ export const translations = {
       emailLabel: 'Correo',
       phoneLabel: 'Teléfono',
       phoneEmpty: '55655375',
+      linkedinLabel: 'LinkedIn',
+      linkedinEmpty: 'Agrega tu LinkedIn en portfolio.js',
     },
   },
   en: {
@@ -269,6 +274,8 @@ export const translations = {
     menu: {
       ariaLabel: 'Portfolio main menu',
       contact: 'Contact',
+      cv: 'CV',
+      cvUnavailable: 'Add your CV in portfolio.js',
       languageButtonLabel: 'Change language',
       quickLinksLabel: 'Quick links',
       options: [
@@ -398,6 +405,7 @@ export const translations = {
     about: {
       summary:
         'I am a Full Stack developer with experience creating web and mobile applications. I mainly work with JavaScript, Java, HTML, and CSS, as well as technologies such as React, React Native, Node.js, Express, MongoDB, PostgreSQL, Git, and Docker. I also have basic C# knowledge and I continue learning new tools to improve my skills. I consider myself responsible, creative, and focused on solving problems through functional, organized, and easy-to-use solutions.',
+      clickHint: 'Click me',
       personalDataLabel: 'Personal data',
       socialProfilesLabel: 'Social profiles',
       details: [
@@ -476,6 +484,8 @@ export const translations = {
       emailLabel: 'Email',
       phoneLabel: 'Phone',
       phoneEmpty: 'Add your number in portfolio.js',
+      linkedinLabel: 'LinkedIn',
+      linkedinEmpty: 'Add your LinkedIn in portfolio.js',
     },
   },
 }

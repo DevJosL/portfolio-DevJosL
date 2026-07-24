@@ -128,6 +128,8 @@ export function HomePage() {
             quickLinks={quickLinks}
             email={personalInfo.email}
             phone={personalInfo.phone}
+            linkedinUrl={personalInfo.linkedinUrl}
+            cvUrl={personalInfo.cvUrl}
             socialLinks={socialLinks}
           />
         ) : (

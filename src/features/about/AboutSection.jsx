@@ -25,6 +25,7 @@ export function AboutSection({ personalDetails, personalInfo, socialLinks, title
                 onClick={() => setActiveModal(detail.id)}
               >
                 <strong>{detail.label}</strong>
+                <span className="option-card__hint">{aboutTexts.clickHint}</span>
               </button>
             )
           }

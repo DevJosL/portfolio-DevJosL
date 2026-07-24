@@ -11,6 +11,8 @@ export const personalInfo = {
     'Soy desarrollador Full Stack en formación, enfocado en crear aplicaciones web y móviles claras, funcionales y bien organizadas.',
   email: 'jmoran-2022388@kinal.edu.gt',
   phone: '55655375',
+  linkedinUrl: 'https://www.linkedin.com/in/jose-mor%C3%A1n-980428424/',
+  cvUrl: '/cv-devjosl-2026.pdf',
 }
 
 export const quickLinks = [

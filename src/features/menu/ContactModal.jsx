@@ -1,6 +1,6 @@
 import { BackButton } from '../../shared/components/BackButton'
 
-export function ContactModal({ email, onClose, phone, socialLinks, texts }) {
+export function ContactModal({ email, linkedinUrl, onClose, phone, socialLinks, texts }) {
   const contactLinks = [
     {
       id: 'email',
@@ -13,6 +13,12 @@ export function ContactModal({ email, onClose, phone, socialLinks, texts }) {
       label: texts.phoneLabel,
       value: phone || texts.phoneEmpty,
       href: phone ? `tel:${phone}` : '',
+    },
+    {
+      id: 'linkedin',
+      label: texts.linkedinLabel,
+      value: linkedinUrl || texts.linkedinEmpty,
+      href: linkedinUrl,
     },
     ...(socialLinks ?? []).map((link) => ({
       id: link.id,

@@ -11,7 +11,9 @@ export function MainMenu({
   onChangeLanguage,
   onSelectScreen,
   quickLinks,
+  cvUrl,
   email,
+  linkedinUrl,
   phone,
   socialLinks,
 }) {
@@ -31,9 +33,14 @@ export function MainMenu({
       <div className="quick-link-spacer" aria-hidden="true" />
 
       <div className="bottom-actions">
-        <PixelButton onClick={() => setIsContactModalOpen(true)}>
-          {menuTexts.contact}
-        </PixelButton>
+        <div className="primary-actions">
+          <PixelButton onClick={() => setIsContactModalOpen(true)}>
+            {menuTexts.contact}
+          </PixelButton>
+          <PixelButton disabled={!cvUrl} href={cvUrl} title={!cvUrl ? menuTexts.cvUnavailable : undefined}>
+            {menuTexts.cv}
+          </PixelButton>
+        </div>
         <div className="icon-row icon-row--beside" aria-label={menuTexts.quickLinksLabel}>
           <IconButton
             icon="language-icon"
@@ -50,6 +57,7 @@ export function MainMenu({
       {isContactModalOpen ? (
         <ContactModal
           email={email}
+          linkedinUrl={linkedinUrl}
           phone={phone}
           socialLinks={socialLinks}
           texts={contactTexts}
